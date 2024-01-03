@@ -38,14 +38,41 @@ public class SwitchExpression {
         }
     }
 
+    @Test
+    void printActivityPerDaysTest() {
+        printActivityPerDays(5);
+    }
+
     enum Level { LOW, MEDIUM, HIGH  }
 
-    public void checkPlayerLevel(Level level) {
+    public String checkPlayerLevel(Level level) {
         String playerLevel = switch (level) {
             case LOW -> "Low level";
             case MEDIUM -> "Medium level";
             default -> "No level reached";
         };
+
+        return playerLevel;
+    }
+
+    @Test
+    void checkPlayerLevelTest() {
+        assertEquals("No level reached", checkPlayerLevel(Level.HIGH));
+    }
+
+    public String checkPlayerLevelAllCasesCovered(Level level) {
+        String playerLevel = switch (level) {
+            case LOW -> "Low level";
+            case MEDIUM -> "Medium level";
+            case HIGH -> "High level";
+        };
+
+        return playerLevel;
+    }
+
+    @Test
+    void checkPlayerLevelAllCasesCoveredTest() {
+        assertEquals("High level", checkPlayerLevelAllCasesCovered(Level.HIGH));
     }
 
 }
