@@ -14,20 +14,7 @@
   </head>
   <body>
 <!-- Code snippet content -->
-<pre style="position: relative; margin: 0; padding: 0;"><code style="font-family: 'Source Code Pro','Consolas','Bitstream Vera Sans Mono','Courier New','Courier'; font-size: 14px" class="language-java" id="code-snippet">  public void printDayOfWeek(int day) {
-      String result = switch(day) {
-          case 1 -> "Monday";
-          case 2 -> "Tuesday";
-          case 3 -> "Wednesday";
-          case 4 -> "Thursday";
-          case 5 -> "Friday";
-          case 6 -> "Saturday";
-          case 7 -> "Sunday";
-          default -> "Invalid value";
-      };
-
-      System.out.println(result);
-  }</code></pre>
+<pre style="position: relative; margin: 0; padding: 0;"><code style="font-family: 'Source Code Pro','Consolas','Bitstream Vera Sans Mono','Courier New','Courier'; font-size: 14px" class="language-java" id="code-snippet">  enum Level { LOW, MEDIUM, HIGH  }</code></pre>
 <button type="button" class="btn btn-outline-secondary btn-sm" style="position:absolute; top:15px; right:10px;" onclick="copyContent()" id="copy-btn">Copy</button>
 
         <script>
@@ -46,6 +33,6 @@
                 }, 2000);
               }
             }
-          </script>
+        </script>
   </body>
 </html>
